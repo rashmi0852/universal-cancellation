@@ -247,3 +247,12 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+# --- Universal cancellation reason ---
+app_include_js = "/assets/cancel_reason/js/cancel_reason.js"
+doc_events = {
+    "*": {
+        "before_cancel": "cancel_reason.api.enforce_cancellation_reason",
+    }
+}
